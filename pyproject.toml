@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "FlaskSQLAlchemyBaseModel"
+version = "1.0.2"
+description = "This is paired with flask_sqlalchemy to build data models. created by Joel .A."
+authors = ["AnozieChibuike <chibuikeanozie0@gmail.com>"]
+license = "MIT license"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.5"
+flask = "^3.0.0"
+flask-sqlalchemy = "^3.1.1"
+sqlalchemy = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
