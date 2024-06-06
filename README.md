@@ -51,8 +51,8 @@ class User(BaseModel):
 - `save` : <span>Used for saving an item to the database</span>
   <p>This will save you the time of doing </p>
 
-      ```
-      db.session.delete(<instance_that_exists_in_the_db>)
+      ```python
+      db.session.save(<instance>)
       db.session.commit()
       ```
 
