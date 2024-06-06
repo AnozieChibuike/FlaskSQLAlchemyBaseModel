@@ -3,12 +3,19 @@ import uuid
 from flask import abort
 from sqlalchemy.orm import Mapped
 from flask_sqlalchemy import SQLAlchemy
-from typing import NoReturn, Type, TypeVar
+from typing import NoReturn, Type, TypeVar, TypedDict
 
 db = SQLAlchemy()
 
+# Types
 T = TypeVar("T", bound="BaseModel")
 
+class PaginationReturn(TypedDict):
+    items: list[T | None]
+    total: int
+    pages: int
+    page: int
+    per_page: int
 
 class BaseModel(db.Model):  # type: ignore[name-defined]
     """
@@ -177,21 +184,14 @@ class BaseModel(db.Model):  # type: ignore[name-defined]
         return cls.filter_one(**kwargs) is not None
 
     @classmethod
-    def paginate(cls: Type[T], page: int = 1, per_page: int = 10) -> dict:
+    def paginate(cls: Type[T], page: int = 1, per_page: int = 10) -> PaginationReturn:
         """
         Paginate items in a model
 
         Arguments:
             **kwargs:
         Return:
-            Dictionary of the pagination:\n
-            {
-                "items": pagination.items,
-                "total": pagination.total,
-                "pages": pagination.pages,
-                "page": pagination.page,
-                "per_page": pagination.per_page\n
-            }
+            Dictionary of the paginated model
         """
         pagination = cls.query.paginate(page=page, per_page=per_page, error_out=False)
         return {
