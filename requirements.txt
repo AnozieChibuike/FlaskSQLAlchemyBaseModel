@@ -1,3 +1,4 @@
 Flask==3.0.0
-FlaskSQLAlchemy==3.1.1
+Flask-SQLAlchemy==3.1.1
 SQLAlchemy==2.0.23
+FlaskSQLAlchemyBaseModel==1.1.5
