@@ -1,4 +1,4 @@
-[![PyPI Version](https://img.shields.io/pypi/v/paystackClientApi.svg)](https://pypi.org/project/FlaskSQLAlchemyBaseModel/)
+[![PyPI Version](https://img.shields.io/pypi/v/FlaskSQLAlchemyBaseModel.svg)](https://pypi.org/project/FlaskSQLAlchemyBaseModel/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/FlaskSQLAlchemyBaseModel.svg)](https://pypi.org/project/FlaskSQLAlchemyBaseModel/)
 [![License](https://img.shields.io/pypi/l/FlaskSQLAlchemyBaseModel.svg)](https://github.com/AnozieChibuike/FlaskSQLAlchemyBaseModel/blob/master/LICENSE)
 
