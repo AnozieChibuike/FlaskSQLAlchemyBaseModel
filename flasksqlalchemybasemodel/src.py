@@ -169,7 +169,7 @@ class BaseModel(db.Model):  # type: ignore[name-defined]
         Return:
             The count of objects
         """
-        return cls.query.all().count()
+        return len(cls.query.all())
 
     @classmethod
     def exists(cls: Type[T], **kwargs) -> bool:
