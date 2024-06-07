@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "FlaskSQLAlchemyBaseModel"
-version = "1.1.5"
+version = "1.2.0"
 description = "FlaskSQLAlchemyBaseModel package provides a foundation for building SQLAlchemy-based ORM models in a Flask application. It offers common functionality required by most models, including automatic handling of unique identifiers, timestamps, and convenience methods for CRUD operations. This package streamlines the development process by offering a consistent and reusable base class for database models, ensuring that every model inherits essential features and reduces boilerplate code."
 authors = ["AnozieChibuike <chibuikeanozie0@gmail.com>"]
 license = "MIT license"
